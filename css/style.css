@@ -1661,3 +1661,69 @@ a {
     transform: none;
   }
 }
+
+
+/* CONTACT SOCIAL ICONS */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.contact-links a svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.contact-links a:hover {
+  background: rgba(145, 201, 229, .08);
+  border-color: var(--blue);
+  color: var(--blue-light);
+  transform: translateY(-2px);
+}
+
+.contact-links a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .contact-links {
+    gap: 8px;
+  }
+
+  .contact-links a {
+    min-height: 40px;
+    padding: 9px 13px;
+    font-size: 10px;
+  }
+
+  .contact-links a svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
