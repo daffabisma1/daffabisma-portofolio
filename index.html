@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b0e">
+
+  <title>Daffa Bisma Anggana — GIS & Geospatial Specialist</title>
+  <meta name="description" content="Professional portfolio of Daffa Bisma Anggana, GIS and Geospatial Specialist focusing on geodetic surveys, spatial mapping, spatial analysis, and water resources consulting.">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="page-noise"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Daffa Bisma Anggana">
+        <img
+          src="assets/logodaffaporto.png"
+          alt="Daffa — GIS and Geospatial"
+          style="height: 48px; width: auto; max-width: 190px; object-fit: contain;"
+        >
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#career">Journey</a>
+      </nav>
+
+      <a href="#contact" class="nav-cta">
+        Let's connect <span>↗</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button"
+        aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-topline">
+          <span><i class="status-dot"></i> PROFESSIONAL PORTFOLIO</span>
+          <span>BANDUNG, INDONESIA <b>·</b> 2026</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">GIS & GEOSPATIAL SPECIALIST</p>
+
+            <h1>
+              Mapping<br>
+              the <span>world.</span><br>
+              Making<br>
+              <span class="outline-text">insights.</span>
+            </h1>
+
+            <p class="hero-description">
+              I'm <strong class="hero-name">Daffa Bisma Anggana</strong>, a GIS and Geospatial Specialist
+              working across geodetic surveys, spatial mapping,
+              geospatial analysis, and water resources consulting.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                Explore projects <span>↘</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                Get in touch <span>↗</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong>17</strong>
+                <span>PROJECT PACKAGES</span>
+              </div>
+              <div>
+                <strong>2024</strong>
+                <span>CAREER START</span>
+              </div>
+              <div>
+                <strong>GIS</strong>
+                <span>CORE EXPERTISE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-heading">
+              <span>01 / SPATIAL VISUALIZATION</span>
+              <span>EARTH MODEL</span>
+            </div>
+
+            <div class="globe-stage">
+              <div class="globe-glow"></div>
+              <div class="globe-ring ring-one"></div>
+              <div class="globe-ring ring-two"></div>
+              <canvas id="earthCanvas" aria-label="Interactive digital globe visualization"></canvas>
+              <div class="globe-loading" id="globeLoading">INITIALIZING GLOBE...</div>
+              <div class="globe-error" id="globeError" hidden>Unable to load globe data.</div>
+            </div>
+
+            <div class="visual-footer">
+              <span>GEOSPATIAL DATA / 360°</span>
+              <span>DRAG TO ROTATE</span>
+            </div>
+
+            <div class="coordinate coordinate-one">06° 54' S</div>
+            <div class="coordinate coordinate-two">107° 36' E</div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <span>AREAS OF FOCUS</span>
+          <div class="expertise-ticker">
+            <span>GEODETIC SURVEY</span><i></i>
+            <span>SPATIAL ANALYSIS</span><i></i>
+            <span>UAV MAPPING</span><i></i>
+            <span>WATER RESOURCES</span>
+          </div>
+          <a href="#about">SCROLL TO EXPLORE ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-top">
+          <span class="section-index">01 / ABOUT ME</span>
+          <span class="section-note">PROFESSIONAL BACKGROUND</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <div class="image-frame">
+              <img src="assets/daffa-profile.jpg"
+                alt="Daffa Bisma Anggana"
+                class="profile-image" loading="lazy">
+              <span class="image-label">DAFFA BISMA ANGGANA / 001</span>
+            </div>
+            <div class="image-caption">
+              <span>BASED IN BANDUNG</span>
+              <span>INDONESIA</span>
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <p class="eyebrow">A LITTLE INTRODUCTION</p>
+            <h2>
+              Turning field data into
+              <span>spatial understanding.</span>
+            </h2>
+
+            <p>
+              I have professional experience in geodetic surveying,
+              geospatial mapping, and water resources consulting.
+              Since May 2024, I have been working as a Technical
+              Staff/GIS at PT Aditya Engineering Consultant in Bandung.
+            </p>
+
+            <p>
+              My work covers topographic surveys, bathymetry,
+              hydro-oceanographic surveys, GNSS, UAV mapping,
+              orthophoto and DEM processing, as well as raster
+              and vector-based spatial data analysis.
+            </p>
+
+            <p>
+              Through various planning and technical investigation
+              projects, I have been involved in watershed analysis,
+              water demand assessment, flood mapping, water
+              infrastructure inventory, and technical documentation.
+            </p>
+
+            <a href="#career" class="text-link">
+              Explore my professional journey <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-numbers">
+          <div class="number-item">
+            <strong>17<span>+</span></strong>
+            <p>PROJECT PACKAGES</p>
+          </div>
+          <div class="number-item">
+            <strong>02</strong>
+            <p>HIGHER EDUCATION PROGRAMS</p>
+          </div>
+          <div class="number-item">
+            <strong>GIS</strong>
+            <p>SPATIAL DATA & MAPPING</p>
+          </div>
+          <div class="number-item">
+            <strong>UAV</strong>
+            <p>SURVEYING & PHOTOGRAMMETRY</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-top">
+          <span class="section-index">02 / SELECTED WORK</span>
+          <span class="section-note">2024 — 2026 / 17 PROJECTS</span>
+        </div>
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">PROJECT ARCHIVE</p>
+            <h2>Work that<br><span>shapes the map.</span></h2>
+          </div>
+          <p class="heading-description">
+            A collection of professional projects involving mapping,
+            irrigation, dams, river basins, flood control,
+            and water resources management.
+          </p>
+        </div>
+
+        <div class="project-toolbar">
+          <span>PROJECT PORTFOLIO</span>
+          <span id="projectCount">SHOWING 4 OF 17 PROJECTS</span>
+        </div>
+
+        <div class="project-grid" id="projectList">
+
+          <article class="project-card reveal">
+            <div class="project-card-top"><span>01 / 17</span><span>2024</span></div>
+            <div class="project-card-content">
+              <p class="project-category">FLOOD CONTROL</p>
+              <h3>DED for the Tenggarong City Canal Development</h3>
+              <p class="project-description">
+                Mapping of administrative boundaries, catchment areas,
+                and land cover, along with topographic surveys.
+                The scope included BM and CP establishment and
+                horizontal and vertical control measurements using
+                geodetic GPS.
+              </p>
+              <div class="tag-list"><span>GNSS</span><span>Topography</span><span>GIS</span></div>
+            </div>
+            <div class="project-card-bottom"><span>TOPOGRAPHIC SURVEY</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"><span>02 / 17</span><span>2024</span></div>
+            <div class="project-card-content">
+              <p class="project-category">DAM</p>
+              <h3>Major Inspection of Sei Rempang Dam</h3>
+              <p class="project-description">
+                Preparation of DEM, regional geology, catchment area,
+                rainfall, land function, soil type, slope,
+                critical land, and land use maps.
+              </p>
+              <div class="tag-list"><span>DEM</span><span>Catchment Area</span><span>GIS</span></div>
+            </div>
+            <div class="project-card-bottom"><span>DAM INSPECTION</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"><span>03 / 17</span><span>2024</span></div>
+            <div class="project-card-content">
+              <p class="project-category">LAKE</p>
+              <h3>Ayamaru Lake Boundary Delineation</h3>
+              <p class="project-description">
+                Mapping of the Kais watershed, sub-catchment areas,
+                land cover, settlements, public facilities, and
+                tourism potential. The project also included
+                topographic and bathymetric surveys and lake
+                bathymetry mapping.
+              </p>
+              <div class="tag-list"><span>Bathymetry</span><span>Topography</span><span>GIS</span></div>
+            </div>
+            <div class="project-card-bottom"><span>LAKE MAPPING</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"><span>04 / 17</span><span>2024</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RAW WATER</p>
+              <h3>DED for Raw Water Supply of Riko–Kernain River</h3>
+              <p class="project-description">
+                Preparation of preliminary reports and supporting maps,
+                field inventory of water deficit locations, existing
+                water infrastructure, water resources damage,
+                and identification of definitive water sources.
+              </p>
+              <div class="tag-list"><span>Inventory</span><span>Field Survey</span><span>Technical Reports</span></div>
+            </div>
+            <div class="project-card-bottom"><span>RAW WATER</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>05 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">IRRIGATION</p>
+              <h3>Rehabilitation of Provincial Irrigation Networks in South Sumatra</h3>
+              <p class="project-description">
+                Agricultural and socioeconomic surveys, drone surveys,
+                orthophoto processing, AOI delineation, land use
+                digitization, and preparation of agricultural matrices.
+              </p>
+              <div class="tag-list"><span>UAV</span><span>Orthophoto</span><span>Digitization</span></div>
+            </div>
+            <div class="project-card-bottom"><span>IRRIGATION</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>06 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RIVER BASIN</p>
+              <h3>RPSDA of Kamundan Sebyar River Basin, West Papua</h3>
+              <p class="project-description">
+                Analysis of watershed population and water demand
+                for domestic, industrial, urban, and irrigation needs;
+                watershed grouping; preliminary water utilization
+                and water-related risk planning; and RPSDA documentation.
+              </p>
+              <div class="tag-list"><span>RPSDA</span><span>Watershed Analysis</span><span>Water Demand</span></div>
+            </div>
+            <div class="project-card-bottom"><span>WATER RESOURCES</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>07 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RIVER BASIN</p>
+              <h3>RPSDA of Mamberamo–Tami–Apauvar River Basin, Papua</h3>
+              <p class="project-description">
+                Analysis of watershed population and water demand,
+                watershed grouping, irrigation water requirements,
+                supporting maps, preliminary water utilization and
+                water-related risk planning, and RPSDA documentation.
+              </p>
+              <div class="tag-list"><span>RPSDA</span><span>GIS</span><span>Spatial Analysis</span></div>
+            </div>
+            <div class="project-card-bottom"><span>WATER RESOURCES</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>08 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">DRAINAGE</p>
+              <h3>DED Planning for Sunter Kresek Pump Station Development</h3>
+              <p class="project-description">
+                Topographic and bathymetric surveys, horizontal
+                and vertical control measurements, tachymetric mapping,
+                AutoCAD and TopoCAD processing, and channel capacity
+                analysis using HEC-RAS.
+              </p>
+              <div class="tag-list"><span>Topography</span><span>Bathymetry</span><span>HEC-RAS</span></div>
+            </div>
+            <div class="project-card-bottom"><span>DRAINAGE DESIGN</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>09 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RIVER BASIN</p>
+              <h3>RPSDA of South Halmahera River Basin</h3>
+              <p class="project-description">
+                Analysis of watershed population and water demand,
+                watershed grouping, irrigation water requirements,
+                preliminary water utilization and water-related
+                risk planning, engineering economics assessment,
+                and RPSDA documentation.
+              </p>
+              <div class="tag-list"><span>RPSDA</span><span>Watershed Analysis</span><span>Engineering Economics</span></div>
+            </div>
+            <div class="project-card-bottom"><span>WATER RESOURCES</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>10 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RIVER BASIN</p>
+              <h3>RPSDA of North Halmahera River Basin</h3>
+              <p class="project-description">
+                Analysis of population, water demand, watershed
+                grouping, irrigation water requirements, preliminary
+                water utilization and water-related risk planning,
+                engineering economics assessment, and RPSDA documentation.
+              </p>
+              <div class="tag-list"><span>RPSDA</span><span>GIS</span><span>Spatial Analysis</span></div>
+            </div>
+            <div class="project-card-bottom"><span>WATER RESOURCES</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>11 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RIVER BASIN</p>
+              <h3>RPSDA of Omba River Basin, West Papua</h3>
+              <p class="project-description">
+                Analysis of population, water demand, watershed
+                grouping, irrigation water requirements, preliminary
+                planning, engineering economics, RPSDA documentation,
+                and water quality calculations.
+              </p>
+              <div class="tag-list"><span>RPSDA</span><span>Water Quality</span><span>Watershed Analysis</span></div>
+            </div>
+            <div class="project-card-bottom"><span>WATER RESOURCES</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>12 / 17</span><span>2025</span></div>
+            <div class="project-card-content">
+              <p class="project-category">DAM</p>
+              <h3>Emergency Action Plan for Mentarang Dam — PT Kayan Hydropower</h3>
+              <p class="project-description">
+                Preparation of flood inundation and depth maps,
+                evacuation routes and points, and mapping of
+                flood-affected infrastructure to support
+                the Emergency Action Plan.
+              </p>
+              <div class="tag-list"><span>Emergency Planning</span><span>Flood Mapping</span><span>Evacuation</span></div>
+            </div>
+            <div class="project-card-bottom"><span>DAM SAFETY</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>13 / 17</span><span>2026</span></div>
+            <div class="project-card-content">
+              <p class="project-category">LAKE</p>
+              <h3>Banano Lake Boundary Delineation</h3>
+              <p class="project-description">
+                Preparation of preliminary reports and supporting
+                maps for the Banano Lake boundary delineation project.
+              </p>
+              <div class="tag-list"><span>Mapping</span><span>Lake</span><span>Technical Reports</span></div>
+            </div>
+            <div class="project-card-bottom"><span>LAKE MAPPING</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>14 / 17</span><span>2026</span></div>
+            <div class="project-card-content">
+              <p class="project-category">RIVER BASIN</p>
+              <h3>Technical Proposal for Five River Basins</h3>
+              <p class="project-description">
+                Preparation of maps for the Barito, Belawan Ular Padang,
+                Jratunseluna, Sumbawa, and Tondano–Sangihe river basins.
+              </p>
+              <div class="tag-list"><span>GIS</span><span>River Basin Mapping</span></div>
+            </div>
+            <div class="project-card-bottom"><span>RIVER BASIN</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>15 / 17</span><span>2026</span></div>
+            <div class="project-card-content">
+              <p class="project-category">FLOOD CONTROL</p>
+              <h3>Detailed Design of Flood Control Structures on Bailang and Mahawu Rivers</h3>
+              <p class="project-description">
+                Preparation of supporting maps and river schemes using
+                AutoCAD, water infrastructure inventory, topographic,
+                bathymetric and hydro-oceanographic surveys, and
+                overview maps at a scale of 1:5,000.
+              </p>
+              <div class="tag-list"><span>AutoCAD</span><span>GNSS</span><span>Bathymetry</span></div>
+            </div>
+            <div class="project-card-bottom"><span>FLOOD CONTROL</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden">
+            <div class="project-card-top"><span>16 / 17</span><span>2026</span></div>
+            <div class="project-card-content">
+              <p class="project-category">DAM</p>
+              <h3>Operation and Maintenance Certification of Rotiklot Dam</h3>
+              <p class="project-description">
+                Support for hydrological analysis using HEC-RAS
+                and participation in hydrology discussions for
+                the dam operation and maintenance certification project.
+              </p>
+              <div class="tag-list"><span>HEC-RAS</span><span>Hydrology</span></div>
+            </div>
+            <div class="project-card-bottom"><span>DAM OPERATION</span><span>↗</span></div>
+          </article>
+
+          <article class="project-card reveal is-hidden featured-project">
+            <div class="project-card-top"><span>17 / 17</span><span>2026</span></div>
+            <div class="project-card-content">
+              <p class="project-category">PROJECT COORDINATOR</p>
+              <h3>Updating the Irrigation Area Map of Riau Province</h3>
+              <p class="project-description">
+                Served as Project Coordinator. Responsibilities
+                included AOI delineation, drone surveys, orthophoto
+                processing, land use digitization, classification
+                of functional and potential land, and preparation
+                of irrigation network inventory reports.
+              </p>
+              <div class="tag-list"><span>Project Coordination</span><span>UAV</span><span>Orthophoto</span><span>GIS</span></div>
+            </div>
+            <div class="project-card-bottom"><span>PROJECT COORDINATION</span><span>↗</span></div>
+          </article>
+        </div>
+
+        <div class="project-more">
+          <span>SHOWING <b id="projectShown">04</b> / 17 PROJECTS</span>
+          <button class="btn btn-outline" id="showProjects" aria-expanded="false">
+            <span>View all projects</span>
+            <span>＋</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section expertise-section" id="expertise">
+      <div class="container">
+        <div class="section-top">
+          <span class="section-index">03 / CAPABILITIES</span>
+          <span class="section-note">TECHNICAL EXPERTISE</span>
+        </div>
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">WHAT I WORK WITH</p>
+            <h2>Tools, skills<br>& <span>capabilities.</span></h2>
+          </div>
+          <p class="heading-description">
+            Technical competencies and software tools used to support
+            surveying, mapping, spatial analysis, and water resources
+            engineering projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-number">01</span>
+            <div class="skill-icon">⌖</div>
+            <h3>GIS & Spatial Analysis</h3>
+            <p>Geospatial data processing, watershed analysis, digitization, thematic mapping, and land use analysis.</p>
+            <div class="skill-tags"><span>ArcGIS / ArcMap</span><span>QGIS</span><span>Global Mapper</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">02</span>
+            <div class="skill-icon">◎</div>
+            <h3>Surveying & Geodesy</h3>
+            <p>Topographic surveys, GNSS measurements, control networks, bathymetry, and hydro-oceanographic surveys.</p>
+            <div class="skill-tags"><span>GNSS</span><span>Topography</span><span>Bathymetry</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">03</span>
+            <div class="skill-icon">◉</div>
+            <h3>Photogrammetry & UAV</h3>
+            <p>Drone surveys, orthophoto processing, DEM generation, and geospatial data interpretation.</p>
+            <div class="skill-tags"><span>Agisoft Metashape</span><span>UAV</span><span>Orthophoto</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">04</span>
+            <div class="skill-icon">⌁</div>
+            <h3>Water Resources Engineering</h3>
+            <p>Hydrological analysis, channel capacity assessment, flood mapping, and technical documentation.</p>
+            <div class="skill-tags"><span>HEC-RAS</span><span>AutoCAD</span><span>TopoCAD</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">05</span>
+            <div class="skill-icon">▤</div>
+            <h3>Data & Technical Documentation</h3>
+            <p>Data processing, report preparation, project documentation, and field investigation records.</p>
+            <div class="skill-tags"><span>Microsoft Office</span><span>Technical Reporting</span></div>
+          </article>
+        </div>
+
+        <div class="soft-skills reveal">
+          <span>PROFESSIONAL SKILLS</span>
+          <div>
+            <span>Data Analysis</span>
+            <span>Problem Solving</span>
+            <span>Attention to Detail</span>
+            <span>Teamwork</span>
+            <span>Communication</span>
+            <span>Project Coordination</span>
+            <span>Time Management</span>
+            <span>Adaptability</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="section career-section" id="career">
+      <div class="container">
+        <div class="section-top">
+          <span class="section-index">04 / MY JOURNEY</span>
+          <span class="section-note">EXPERIENCE & EDUCATION</span>
+        </div>
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">THE PROFESSIONAL PATH</p>
+            <h2>Experience<br>& <span>education.</span></h2>
+          </div>
+          <p class="heading-description">
+            My professional experience and educational background
+            have shaped my foundation in engineering, geodesy,
+            and geospatial information.
+          </p>
+        </div>
+
+        <div class="journey-group reveal">
+          <div class="journey-label">
+            <span>01</span>
+            <h3>Work Experience</h3>
+          </div>
+
+          <div class="journey-content">
+            <article class="journey-item">
+              <div class="journey-date">MAY 2024 — PRESENT</div>
+              <div>
+                <p class="journey-type">PROFESSIONAL EXPERIENCE / BANDUNG</p>
+                <h4>PT Aditya Engineering Consultant</h4>
+                <strong>Technical Staff / GIS</strong>
+                <p>
+                  Involved in surveying activities, technical
+                  investigations, geospatial data processing,
+                  and water resources consulting projects.
+                </p>
+                <ul>
+                  <li>Topographic, geodetic, bathymetric, hydro-oceanographic, and UAV surveys.</li>
+                  <li>Orthophoto, DEM, raster and vector data processing, and thematic mapping.</li>
+                  <li>Watershed and water demand spatial analysis for planning documents.</li>
+                  <li>Preparation of flood inundation maps, evacuation routes, and affected infrastructure maps.</li>
+                  <li>Channel analysis support using HEC-RAS and technical documentation.</li>
+                  <li>Survey coordination and project reporting.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="journey-group education-group reveal">
+          <div class="journey-label">
+            <span>02</span>
+            <h3>Education</h3>
+          </div>
+
+          <div class="journey-content">
+            <article class="journey-item">
+              <div class="journey-date">2026 — 2027 / ESTIMATED</div>
+              <div>
+                <p class="journey-type">HIGHER EDUCATION / BANDUNG</p>
+                <h4>Institut Teknologi Nasional</h4>
+                <strong>Bachelor of Geodetic Engineering — RPL</strong>
+                <p>
+                  Recognition of Prior Learning (RPL) program
+                  with 72 transferred credits from 29 courses.
+                  Areas of study include GIS, terrestrial surveying,
+                  GNSS, photogrammetry, coordinate transformation,
+                  and geospatial data visualization.
+                </p>
+              </div>
+            </article>
+
+            <article class="journey-item">
+              <div class="journey-date">2019 — 2025</div>
+              <div>
+                <p class="journey-type">HIGHER EDUCATION / BANDUNG</p>
+                <h4>Universitas Katolik Parahyangan</h4>
+                <strong>Bachelor of Civil Engineering</strong>
+                <p>
+                  Completed 144 credits in the undergraduate
+                  Civil Engineering program.
+                </p>
+              </div>
+            </article>
+
+            <article class="journey-item">
+              <div class="journey-date">2016 — 2019</div>
+              <div>
+                <p class="journey-type">SECONDARY EDUCATION / BANDUNG</p>
+                <h4>SMA Negeri 11 Bandung</h4>
+                <strong>Science Program</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-top">
+          <span class="section-index">05 / GET IN TOUCH</span>
+          <span class="section-note">OPEN FOR PROFESSIONAL CONNECTIONS</span>
+        </div>
+
+        <div class="contact-content">
+          <div>
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Have a project<br>in <span>mind?</span></h2>
+          </div>
+
+          <div class="contact-details">
+            <p>
+              For career opportunities, professional collaborations,
+              project discussions, or geospatial and surveying-related
+              inquiries, feel free to get in touch.
+            </p>
+
+            <a class="contact-email" href="mailto:daffabismaa48@gmail.com">
+              daffabismaa48@gmail.com <span>↗</span>
+            </a>
+
+            <div class="contact-links">
+              <a href="https://wa.me/6285286503935" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+              <a href="https://www.linkedin.com/in/daffa-bisma-anggana-2392271b9" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <a href="#home" class="brand" aria-label="Daffa Bisma Anggana">
+            <img
+              src="assets/logodaffaporto.png"
+              alt="Daffa — GIS and Geospatial"
+              style="height: 42px; width: auto; max-width: 170px; object-fit: contain;"
+            >
+          </a>
+          <span>© 2026 DAFFA BISMA ANGGANA</span>
+          <a href="#home">BACK TO TOP ↑</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
