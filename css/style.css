@@ -1727,3 +1727,24 @@ a {
 }
 
 
+/* FIX CONTACT SOCIAL ICON COLORS */
+
+.contact-links a {
+  color: var(--blue) !important;
+}
+
+.contact-links a svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  fill: var(--blue) !important;
+}
+
+.contact-links a:hover {
+  color: var(--blue-light) !important;
+}
+
+.contact-links a:hover svg {
+  fill: var(--blue-light) !important;
+}
