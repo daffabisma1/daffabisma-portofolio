@@ -3,7 +3,10 @@
    DAFFA BISMA ANGGANA — PORTFOLIO INTERACTIONS
 ===================================================== */
 
-/* RESET PAGE POSITION ON REFRESH */
+
+/* =====================================================
+   RESET PAGE POSITION ON REFRESH
+===================================================== */
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -19,17 +22,20 @@ window.addEventListener("pageshow", () => {
   }
 });
 
+
+/* =====================================================
+   INITIALIZE ALL INTERACTIONS
+===================================================== */
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
   initializeHeader();
   initializeProjectList();
   initializeRevealAnimation();
   initializeActiveNavigation();
-  initializeGlobe();
-
-  // NEW: Experience section
   initializeExperienceLedger();
   initializePigmentEffect();
+  initializeGlobe();
 });
 
 
@@ -267,7 +273,8 @@ function initializeActiveNavigation() {
 
 
 /* =====================================================
-   EXPERIENCE LEDGER — ACCORDION
+   LEDGER — ACCORDION
+   EDUCATION + PROFESSIONAL EXPERIENCE
 ===================================================== */
 
 function initializeExperienceLedger() {
@@ -321,7 +328,6 @@ function initializeExperienceLedger() {
 
     if (!trigger || !detail) return;
 
-    // Synchronize initial HTML state.
     const initiallyOpen =
       row.classList.contains("is-open") &&
       trigger.getAttribute("aria-expanded") === "true";
@@ -335,14 +341,12 @@ function initializeExperienceLedger() {
     trigger.addEventListener("click", () => {
       const isOpen = row.classList.contains("is-open");
 
-      // Close every other experience.
       rows.forEach(otherRow => {
         if (otherRow !== row) {
           closeRow(otherRow);
         }
       });
 
-      // Toggle the selected experience.
       if (isOpen) {
         closeRow(row);
       } else {
@@ -354,7 +358,8 @@ function initializeExperienceLedger() {
 
 
 /* =====================================================
-   EXPERIENCE LEDGER — PIGMENT CURSOR EFFECT
+   LEDGER — PIGMENT CURSOR EFFECT
+   AUTOMATICALLY APPLIES TO EDUCATION + EXPERIENCE
 ===================================================== */
 
 function initializePigmentEffect() {
@@ -370,13 +375,25 @@ function initializePigmentEffect() {
     "(hover: hover) and (pointer: fine)"
   ).matches;
 
-  // Disable the effect on touch devices or reduced motion.
+  // Disable cursor effect on touch devices or reduced motion.
   if (reducedMotion || !finePointer) return;
 
   rows.forEach(row => {
-    const canvas = row.querySelector(".ledger-pigment");
 
-    if (!canvas) return;
+    /*
+      IMPORTANT:
+      Automatically create canvas when HTML does not contain it.
+      This ensures Education receives the same pigment effect.
+    */
+
+    let canvas = row.querySelector(".ledger-pigment");
+
+    if (!canvas) {
+      canvas = document.createElement("canvas");
+      canvas.className = "ledger-pigment";
+      canvas.setAttribute("aria-hidden", "true");
+      row.prepend(canvas);
+    }
 
     const context = canvas.getContext("2d");
 
@@ -422,12 +439,15 @@ function initializePigmentEffect() {
       );
     }
 
+
+    /* DRAW PIGMENT */
+
     function drawPigment() {
       animationFrame = null;
 
       context.save();
 
-      // Gradually fade previous pigment.
+      // Fade previous pigment gradually.
       context.globalCompositeOperation = "destination-out";
       context.fillStyle = "rgba(0, 0, 0, 0.075)";
       context.fillRect(0, 0, width, height);
@@ -435,6 +455,7 @@ function initializePigmentEffect() {
       context.globalCompositeOperation = "source-over";
 
       if (isInside) {
+
         // Smooth cursor movement.
         pointerX += (targetX - pointerX) * 0.16;
         pointerY += (targetY - pointerY) * 0.16;
@@ -444,6 +465,7 @@ function initializePigmentEffect() {
           Math.max(100, width * 0.18)
         );
 
+        // Main blue pigment.
         const gradient = context.createRadialGradient(
           pointerX,
           pointerY,
@@ -476,7 +498,8 @@ function initializePigmentEffect() {
         context.fillStyle = gradient;
         context.fillRect(0, 0, width, height);
 
-        // Soft secondary pigment bloom.
+
+        // Secondary soft pigment bloom.
         const bloom = context.createRadialGradient(
           pointerX + 35,
           pointerY + 12,
@@ -507,11 +530,15 @@ function initializePigmentEffect() {
       }
     }
 
+
     function requestDraw() {
       if (animationFrame !== null) return;
 
       animationFrame = requestAnimationFrame(drawPigment);
     }
+
+
+    /* POINTER ENTER */
 
     row.addEventListener("pointerenter", event => {
       isInside = true;
@@ -527,6 +554,9 @@ function initializePigmentEffect() {
       requestDraw();
     });
 
+
+    /* POINTER MOVE */
+
     row.addEventListener("pointermove", event => {
       if (!isInside) return;
 
@@ -538,6 +568,9 @@ function initializePigmentEffect() {
       requestDraw();
     });
 
+
+    /* POINTER LEAVE */
+
     row.addEventListener("pointerleave", () => {
       isInside = false;
 
@@ -546,7 +579,7 @@ function initializePigmentEffect() {
         animationFrame = null;
       }
 
-      // Fade out the remaining pigment.
+      // Fade out remaining pigment.
       let fadeFrames = 0;
 
       function fadeOut() {
@@ -574,9 +607,12 @@ function initializePigmentEffect() {
       animationFrame = requestAnimationFrame(fadeOut);
     });
 
+
+    /* INITIALIZE CANVAS */
+
     resizeCanvas();
 
-    // Resize canvas when the row dimensions change.
+    // Resize canvas when row dimensions change.
     if ("ResizeObserver" in window) {
       const resizeObserver = new ResizeObserver(() => {
         resizeCanvas();
@@ -584,6 +620,7 @@ function initializePigmentEffect() {
 
       resizeObserver.observe(row);
     }
+
   });
 }
 
@@ -639,6 +676,9 @@ function initializeGlobe() {
 
   const baseRotationSpeed = 0.12;
 
+
+  /* RESIZE GLOBE */
+
   function resizeCanvas() {
     const rect = canvas.parentElement.getBoundingClientRect();
 
@@ -677,6 +717,9 @@ function initializeGlobe() {
     drawGlobe();
   }
 
+
+  /* DRAW GLOBE */
+
   function drawGlobe() {
     if (!projection || !path) return;
 
@@ -694,7 +737,7 @@ function initializeGlobe() {
     context.fill();
     context.restore();
 
-    // Solid ocean surface.
+    // Ocean surface.
     context.beginPath();
     path(sphere);
     context.fillStyle = "#18394c";
@@ -707,8 +750,8 @@ function initializeGlobe() {
     context.lineWidth = 1.15;
     context.stroke();
 
+    // Land surface.
     if (landData) {
-      // Land surface.
       context.beginPath();
       path(landData);
       context.fillStyle = "#a5d9ed";
@@ -733,7 +776,7 @@ function initializeGlobe() {
     context.lineWidth = 1;
     context.stroke();
 
-    // Small location marker.
+    // Location marker.
     const marker = projection([107.6, -6.9]);
 
     if (
@@ -754,6 +797,9 @@ function initializeGlobe() {
     }
   }
 
+
+  /* AUTO ROTATION */
+
   function animate() {
     if (!isDragging && !reducedMotion) {
       rotation[0] += baseRotationSpeed;
@@ -766,6 +812,9 @@ function initializeGlobe() {
     animationFrame = requestAnimationFrame(animate);
   }
 
+
+  /* POINTER POSITION */
+
   function getPointerPosition(event) {
     const rect = canvas.getBoundingClientRect();
 
@@ -774,6 +823,9 @@ function initializeGlobe() {
       event.clientY - rect.top
     ];
   }
+
+
+  /* DRAG GLOBE */
 
   canvas.addEventListener("pointerdown", event => {
     isDragging = true;
@@ -814,6 +866,9 @@ function initializeGlobe() {
   canvas.addEventListener("pointercancel", stopDragging);
   canvas.addEventListener("lostpointercapture", stopDragging);
 
+
+  /* ZOOM GLOBE */
+
   canvas.addEventListener("wheel", event => {
     event.preventDefault();
 
@@ -832,6 +887,9 @@ function initializeGlobe() {
   }, {
     passive: false
   });
+
+
+  /* LOAD GLOBE */
 
   const resizeObserver = new ResizeObserver(resizeCanvas);
 
@@ -857,9 +915,12 @@ function initializeGlobe() {
       if (loading) loading.hidden = true;
       if (errorMessage) errorMessage.hidden = false;
 
-      // Keep the ocean sphere visible even if land data fails.
+      // Keep ocean sphere visible if land data fails.
       drawGlobe();
     });
+
+
+  /* CLEANUP */
 
   window.addEventListener("beforeunload", () => {
     if (animationFrame) {
